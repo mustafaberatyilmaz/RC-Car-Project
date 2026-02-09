@@ -1,27 +1,38 @@
 # RC Car Project (ESP32-CAM & SLAM & Flutter)
 
-This is a comprehensive RC car project based on ESP32-CAM, featuring remote control capabilities and Visual SLAM (Simultaneous Localization and Mapping) technology.
+This project is an advanced RC vehicle platform combining image processing and remote control capabilities. The primary goal is to push the boundaries of autonomous driving and mapping (SLAM) capabilities using low-cost hardware (ESP32-CAM).
 
-## 🚧 Project Status: Work in Progress
-
-This project is currently under active development. Improvements and updates are ongoing in the following areas:
-
-*   **SLAM Algorithm:** Optimization work is in progress for accurate mapping and localization.
-*   **Mechanical Design:** Mechanical improvements are being made to the vehicle chassis and camera mount.
-*   **Software:** Software updates dependent on hardware changes will be applied to both the embedded system (ESP32) and the SLAM implementation.
+## 📸 Vehicle View
+*(Please save the vehicle photo as `rc_car.jpg` in this folder)*
+![RC Car](rc_car.jpg)
 
 ---
 
-## Project Components
+## 🚧 Project Status: Work in Progress
+
+This is an active R&D project. Current focus areas include:
+*   **SLAM Optimization:** Performance comparisons of feature extractors like ORB and AKAZE are ongoing.
+*   **Mechanical Stabilization:** Damping work on the chassis is in progress to reduce camera vibration.
+*   **Latency Reduction:** Alternatives like UDP and WebSocket are being tested to minimize image transmission latency.
+
+---
+
+## Technical Details & Components
 
 ### 1. [Embedded System](./1_Embedded_System/README.md)
-Integration of the ESP32-CAM (the brain of the vehicle) and the motor driver.
-![Circuit Diagram](1_Embedded_System/electrical_circuit.png)
+The hardware layer of the vehicle.
+*   **ESP32-CAM:** Acts as both the main processor and camera module. Captures video and streams it over Wi-Fi.
+*   **TB6612FNG:** A much more efficient motor driver than the L298N, with less heat generation. Provides precise speed control via PWM signals.
+*   **Power Management:** LM2596 regulators provide stable 3.3V and 5V to the system, preventing ESP32 "Brownout" errors.
 
 ### 2. [Mobile App (Flutter)](./2_Flutter_App/README.md)
-User interface developed to control the vehicle via Wi-Fi and view the camera feed.
-![App Interface](2_Flutter_App/screenshots/drive%20car%20app%20interface.png)
+The control center of the vehicle.
+*   **Technology:** Developed with Google Flutter (Dart), enabling high performance on both Android and iOS.
+*   **Communication:** Receives video via HTTP stream and sends motor commands via REST API-like requests.
+*   **Interface:** Offers a user-friendly joystick and real-time video feed.
 
 ### 3. [SLAM System](./3_SLAM_System/README.md)
-Visual processing module that enables the vehicle to map its environment.
-![SLAM Map](3_SLAM_System/results/2d_map_x-z_slam.png)
+The "eyes" and "brain" of the vehicle.
+*   **Visual SLAM:** Creates a 3D map of the environment using only a single camera (Monocular).
+*   **Python & OpenCV:** Image processing algorithms run on the computer (PC) side, offloading the processing burden from the ESP32.
+*   **Feature Extraction:** Detects distinctive points (corners, edges) in the image to calculate the vehicle's movement.
