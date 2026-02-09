@@ -1,0 +1,6 @@
+{
+    "board": "esp32:esp32:esp32cam",
+    "configuration": "FlashMode=qio,FlashFreq=80,PartitionScheme=huge_app,UploadSpeed=921600,DebugLevel=none",
+    "sketch": "esp32_firmware/esp32_cam_car.ino",
+    "output": "../build"
+}

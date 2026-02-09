@@ -1,0 +1,36 @@
+Camera:
+  name: "Webcam"
+  deviceId: 2 # External Camera (Index 2)
+  type: "Monocular"
+  
+  # Kamera parametreleri (Başlangıç değerleri, kalibrasyon sonrası güncellenecek)
+  fx: 500.0  # Focal length x
+  fy: 500.0  # Focal length y
+  cx: 320.0  # Principal point x
+  cy: 240.0  # Principal point y
+  
+  # Distortion parametreleri
+  k1: 0.0
+  k2: 0.0
+  p1: 0.0
+  p2: 0.0
+  k3: 0.0
+  
+  # Çözünürlük
+  width: 640
+  height: 480
+  fps: 30
+  
+  # ORB Feature parametreleri
+  nFeatures: 2000
+  scaleFactor: 1.2
+  nLevels: 8
+  
+Tracker:
+  type: "ORB"
+  
+Viewer:
+  ViewpointX: 0
+  ViewpointY: -0.7
+  ViewpointZ: -1.8
+  ViewpointF: 500
