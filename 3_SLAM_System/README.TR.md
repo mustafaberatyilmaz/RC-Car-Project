@@ -19,17 +19,12 @@ Bu sistem **Monocular SLAM** (Tek Kameralı SLAM) prensibine dayanır. Süreç �
 
 ## 📊 Sonuçlar ve Analiz
 
-### 2D Harita (X-Z Düzlemi)
-Aşağıdaki görsel, aracın hareket ettiği rotayı kuş bakışı (top-down) olarak göstermektedir.
-![2D Harita](results/2d_map_x-z_slam.png)
+Aşağıdaki tabloda algoritmanın gerçek ortamdaki çıktısı, oluşturulan 2D harita ve doluluk ızgarası yan yana karşılaştırılmıştır.
 
-### Doluluk Izgarası (Occupancy Grid)
-SLAM verileri, robotun "dolu" (engel var) veya "boş" (gidilebilir) olarak algıladığı alanları bir ızgara üzerinde işaretler.
-![Doluluk Izgarası](results/occupancy_grid_slam.png)
-
-### Gerçek Ortam
-SLAM algoritmasının test edildiği fiziksel ortam ve engeller.
-![Gerçek Ortam](results/photos_of_real_obstacles.jpeg)
+| Gerçek Ortam ve Engeller | 2D Harita (X-Z) | Doluluk Izgarası |
+| :---: | :---: | :---: |
+| <img src="results/photos_of_real_obstacles.jpeg" width="100%"> | <img src="results/2d_map_x-z_slam.png" width="100%"> | <img src="results/occupancy_grid_slam.png" width="100%"> |
+| *Testin yapıldığı fiziksel ortam.* | *Kuş bakışı araç rotası.* | *Algılanan engeller (Beyaz: Boş, Siyah: Dolu).* |
 
 ## Zorluklar ve Gelecek Çalışmalar
 Tek kamera ile derinlik algılamak (Depth Perception) zordur. Bu nedenle haritanın ölçeği (scale) belirsiz olabilir (yani haritada 1 birim, gerçekte 10cm mi 1m mi olduğu tam bilinemeyebilir). İleride **Stereo Kamera** veya **IMU (İvmeölçer)** sensör füzyonu ile bu sorunun çözülmesi hedeflenmektedir.

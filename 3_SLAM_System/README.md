@@ -19,17 +19,12 @@ This system is based on the **Monocular SLAM** (Single Camera SLAM) principle. T
 
 ## 📊 Results and Analysis
 
-### 2D Map (X-Z Plane)
-The image below shows the route traveled by the vehicle from a top-down perspective.
-![2D Map](results/2d_map_x-z_slam.png)
+The table below compares the real environment, the generated 2D map, and the occupancy grid side-by-side.
 
-### Occupancy Grid
-SLAM data marks areas perceived by the robot as "occupied" (obstacle present) or "free" (traversable) on a grid.
-![Occupancy Grid](results/occupancy_grid_slam.png)
-
-### Real Environment
-The physical environment and obstacles where the SLAM algorithm was tested.
-![Real Environment](results/photos_of_real_obstacles.jpeg)
+| Real Environment | 2D Map (X-Z Plane) | Occupancy Grid |
+| :---: | :---: | :---: |
+| <img src="results/photos_of_real_obstacles.jpeg" width="100%"> | <img src="results/2d_map_x-z_slam.png" width="100%"> | <img src="results/occupancy_grid_slam.png" width="100%"> |
+| *Physical environment of the test.* | *Top-down view of the vehicle route.* | *Detected obstacles (White: Free, Black: Occupied).* |
 
 ## Challenges and Future Work
 Perceiving depth with a single camera is difficult. Therefore, the scale of the map may be ambiguous (e.g., whether 1 unit on the map corresponds to 10cm or 1m in reality is not precisely known). Future work aims to resolve this issue using **Stereo Cameras** or **IMU (Accelerometer)** sensor fusion.
