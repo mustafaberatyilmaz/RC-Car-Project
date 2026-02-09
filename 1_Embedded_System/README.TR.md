@@ -9,6 +9,9 @@ Bu klasör, ESP32-CAM ve motor sürücü (TB6612FNG) entegrasyonu için gerekli 
 - **.vscode:** Bu proje için gerekli VS Code yapılandırma dosyalarını (Arduino ayarları vb.) içerir.
 
 ## Devre Bağlantı Şeması (Circuit Diagram)
+
+![Devre Şeması](electrical_circuit.png)
+
 Aşağıdaki bileşenler ve bağlantılar kullanılmıştır:
 
 *   **ESP32-CAM:** Ana kontrolcü.

@@ -12,10 +12,10 @@ In this project, a Python-based Visual SLAM algorithm is implemented using image
 ### Results
 
 #### 2D Map (X-Z)
-![2D Map](results/2D%20Map%20(X-Z)%20SLAM.png)
+![2D Map](results/2d_map_x-z_slam.png)
 
 #### Occupancy Grid
-![Occupancy Grid](results/Occupancy%20Grid%20SLAM.png)
+![Occupancy Grid](results/occupancy_grid_slam.png)
 
 #### Real Environment and Obstacles
-![Real Environment](results/photos%20of%20real%20obstacles.jpeg)
+![Real Environment](results/photos_of_real_obstacles.jpeg)

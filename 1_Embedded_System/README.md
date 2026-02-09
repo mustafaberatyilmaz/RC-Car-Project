@@ -9,6 +9,9 @@ This directory contains all embedded system codes and schematics required for th
 - **.vscode:** Contains VS Code configuration files (Arduino settings, etc.) required for this project.
 
 ## Circuit Diagram & Connections
+
+![Circuit Diagram](electrical_circuit.png)
+
 The following components and connections are used in this project:
 
 *   **ESP32-CAM:** Main controller.
