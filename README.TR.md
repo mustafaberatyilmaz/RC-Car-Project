@@ -4,7 +4,7 @@ Bu proje, görüntü işleme ve uzaktan kontrol yeteneklerini birleştiren geli�
 
 ## 📸 Araç Görünümü
 *(Lütfen aracın fotoğrafını `rc_car.jpg` adıyla bu klasöre kaydedin)*
-![RC Araç](rc_car.jpg)
+![RC Araç](rc_car.jpeg)
 
 ---
 

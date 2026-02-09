@@ -4,7 +4,7 @@ This project is an advanced RC vehicle platform combining image processing and r
 
 ## 📸 Vehicle View
 *(Please save the vehicle photo as `rc_car.jpg` in this folder)*
-![RC Car](rc_car.jpg)
+![RC Car](rc_car.jpeg)
 
 ---
 
